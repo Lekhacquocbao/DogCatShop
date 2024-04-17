@@ -1,6 +1,6 @@
 import React from 'react';
-import { WrapperContent, WrapperLabelText, WrapperTextValue } from './style';
-import { Checkbox, Col, Rate, Row } from 'antd';
+import { WrapperContent, WrapperLabelText, WrapperTextPrice, WrapperTextValue } from './style';
+import { Checkbox, Rate } from 'antd';
 
 const NavbarComponent = () => {
     const onChange = () => {}
@@ -25,10 +25,18 @@ const NavbarComponent = () => {
             case 'star':
                 return options.map((option) => {
                         return (
-                            <>
-                                <span></span>
+                            <div style={{display: 'flex', gap: '4px'}}>
                                 <Rate style={{fontSize :'12px'}} disabled defaultValue={option}></Rate>
-                            </>
+                                <span>{`Từ ${option} sao`}</span>
+                            </div>
+                        )
+                    })
+            case 'price':
+                return options.map((option) => {
+                        return (
+                            <WrapperTextPrice>
+                                  {option}
+                            </WrapperTextPrice>
                         )
                     })
             default:
@@ -51,6 +59,9 @@ const NavbarComponent = () => {
             </WrapperContent>
             <WrapperContent>
                 {renderContent('star',[3,4,5])}
+            </WrapperContent>
+            <WrapperContent>
+                {renderContent('price',['Dưới 500 000',' Trên 500 000'])}
             </WrapperContent>
         </div>
     );
