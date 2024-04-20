@@ -10,7 +10,7 @@ const CardComponent = () => {
                 headStyle={{width: '200px', height: '200px'}}
                 style={{ width: 240 }}
                 bodyStyle={{padding: '10px'}}
-                cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
+                cover={<img alt="example" src="https://devo.vn/wp-content/uploads/2023/01/meo-cam-dao.jpg" />}
             >
                 <StyleNameProduct>Shiba</StyleNameProduct>
                 <WrapperReporText>

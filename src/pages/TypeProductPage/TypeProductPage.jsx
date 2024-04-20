@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import NavbarComponent from '../../components/NavbarComponent/NavbarComponent';
 import CardComponent from '../../components/CardComponent/CardComponent';
-import { Col, Row } from 'antd';
+import { Col, Pagination, Row } from 'antd';
+import { WrapperNavbar, WrapperProducts } from './style';
 
 const TypeProductPage = () => {
+    const onChange = () => {
+
+    }
     return (
-        <Row style={{padding: '0 120'}}>
-            <Col span={6}>
-                <NavbarComponent></NavbarComponent>
-            </Col>
-            <Col span={18}>
-                <CardComponent></CardComponent>
-            </Col>
-        </Row>
+        <div style={{padding: '0 120px',background: '#efefef'}}>
+            <Row style={{ flexWrap: 'nowrap', paddingTop: '10px'}}>
+                <WrapperNavbar span={4}>
+                    <NavbarComponent></NavbarComponent>
+                </WrapperNavbar>
+                <Col span={20}>
+                    <WrapperProducts>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                        <CardComponent></CardComponent>
+                    </WrapperProducts>
+                    <Pagination defaultCurrent={2} total={100} onChange={onChange} style={{textAlign: 'center', marginTop: '10px'}}/>
+                </Col>
+            </Row>
+        </div>
+
     );
 }
 
