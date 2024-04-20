@@ -5,11 +5,13 @@ import { Col, Row } from 'antd';
 
 const TypeProductPage = () => {
     return (
-        <Row>
-            <Col>
+        <Row style={{padding: '0 120'}}>
+            <Col span={6}>
                 <NavbarComponent></NavbarComponent>
             </Col>
-            <CardComponent></CardComponent>
+            <Col span={18}>
+                <CardComponent></CardComponent>
+            </Col>
         </Row>
     );
 }
