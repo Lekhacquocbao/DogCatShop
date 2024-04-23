@@ -61,15 +61,18 @@ export const WrapperQualityProduct = styled.div`
     display: flex;
     gap: 4px;
     align-items: center;
-    /* border-radius: 4px; */
-    /* border: 1px solid #ccc; */
-    width: 100px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 120px;
 `
 
 export const WrapperInputNumber = styled(InputNumber)`
     &.ant-input-number.ant-input-number-sm{
-        width: 40px;
+        width: 60px;
         border-top: none;
         border-bottom: none;
+        &.ant-input-number-handler-wrap{
+        display: none !important;
+    }
     }
 `
