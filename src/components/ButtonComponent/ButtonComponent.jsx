@@ -3,8 +3,8 @@ import { Button } from "antd";
 
 const ButtonComponent = ({
         size, 
-        styteButton,
-        styteTextButton,
+        styleButton,
+        styleTextButton,
         textButton,
          ...rests
         }) => {
@@ -12,10 +12,9 @@ const ButtonComponent = ({
     return (
         <Button 
         size={size} 
-        style={{styteButton,borderRadius: 0}}
+        style={{styleButton,borderRadius: 0}}
         {...rests}
-        // icon={<SearchOutlined style={{color: colorButton}} />}
-        ><span style={styteButton} >{textButton}</span>
+        ><span style={styleButton} >{textButton}</span>
         </Button>
     )
 }

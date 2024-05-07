@@ -84,21 +84,21 @@ const ProductDetailComponent = () => {
                                 borderRadius: '4px'
                             }}
                             textButton={'Chọn mua'}
-                            styleTextButton={{color: '#fff', fontSize: '15px', fontWeight: '700px'}}>
-                        </ButtonComponent>
+                            styleTextButton={{color: '#fff', fontSize: '15px', fontWeight: '700'}}
+                        ></ButtonComponent>
                         <ButtonComponent
                         bordered={false}
                             size={40}
                             styleButton={{
-                                background: 'rgb(255,57,69)',
+                                background: '#fff',
                                 height: '48px',
                                 width: '220px',
-                                border: '1px solid rgb(13,92,182)',
+                                border: 'none',
                                 borderRadius: '4px'
                             }}
                             textButton={'Thêm vào giỏ hàng'}
-                            styleTextButton={{color: '#fff',fontSize: '15px'}}>
-                        </ButtonComponent>
+                            styleTextButton={{color: 'rgb(13,92,182)',fontSize: '15px'}}
+                        ></ButtonComponent>
                     </div>
                 </Col>
             </Row>

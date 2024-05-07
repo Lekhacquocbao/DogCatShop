@@ -5,7 +5,7 @@ const InputComponent = ({
         size, 
         placeholder, 
         bordered, 
-        styte,
+        style,
          ...rests
         }) => {
             
@@ -14,7 +14,7 @@ const InputComponent = ({
             size={size}
             placeholder={placeholder}
             bordered={bordered}
-            styte={styte}
+            style={style}
             {...rests}
        />
     )
