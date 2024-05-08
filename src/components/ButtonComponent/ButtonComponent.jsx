@@ -6,17 +6,24 @@ const ButtonComponent = ({
         styleButton,
         styleTextButton,
         textButton,
-         ...rests
+        disabled,
+        ...rests
         }) => {
             
     return (
         <Button 
-        size={size} 
-        style={{styleButton,borderRadius: 0}}
-        {...rests}
-        ><span style={styleButton} >{textButton}</span>
+            style={{
+                ...styleButton,
+                background: disabled ? '#ccc' : styleButton.background,
+                borderRadius: 0
+            }}
+            size={size} 
+            {...rests}
+        >
+            <span style={styleTextButton}>{textButton}</span>
         </Button>
     )
 }
 
 export default ButtonComponent 
+

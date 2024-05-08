@@ -15,12 +15,12 @@ import {
 
 const HeaderComponent = () => {
     return (
-        <div>
+        <div style={{ width: '100%', background: 'rgb(26,148,255', display: 'flex', justifyContent: 'center'}}>
             <WrapperHeader>
-            <Col span={6}>
+            <Col span={5}>
                 <WrapperTextHeader>BH SHOP</WrapperTextHeader>
             </Col>
-            <Col span={12}>
+            <Col span={13}>
                 <ButtonInputSearch 
                     size="large"
                     bordered={false}
@@ -29,7 +29,7 @@ const HeaderComponent = () => {
                 >
                 </ButtonInputSearch>
             </Col>
-            <Col span={6} style={{display: 'flex', gap: '25px', alignItems: 'center'}}>
+            <Col span={6} style={{display: 'flex', gap: '54px', alignItems: 'center'}}>
                 <WrapperHeaderAccount>
                     <UserOutlined style={{fontSize: '30px'}}></UserOutlined>
                     <div>

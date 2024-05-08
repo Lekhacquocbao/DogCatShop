@@ -4,8 +4,11 @@ import InputForm from '../../components/InputForm/InputForm';
 import ButtonComponent from '../../components/ButtonComponent/ButtonComponent';
 import { Image } from 'antd';
 import imageLogo from '../../assets/images/logo-login.avif'
+import {EyeFilled, EyeInvisibleFilled} from '@ant-design/icons'
+import { useState } from 'react';
 
 const SignUpPage = () => {
+    const [isShowPassword, setIsShowPassword] = useState(false)
     return (
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.53)', height: '100vh'}}>
                  <div style={{width: '800px', height: '445px', borderRadius: '6px', background: '#fff', display: 'flex'}}>
@@ -13,8 +16,46 @@ const SignUpPage = () => {
                         <h1>Xin chao</h1>
                         <p>Đăng nhập và tạo tài khoản</p>
                         <InputForm style={{marginBottom: '10px'}} placeholder="abc@gmail.com"></InputForm>
-                        <InputForm placeholder="password" style={{marginBottom: '10px'}} ></InputForm>
-                        <InputForm placeholder="conrfim password" ></InputForm>
+                        <div style={{position: 'relative' ,marginBottom: '10px'}}>
+                            <span
+                                style={{
+                                    zIndex: 10,
+                                    position: 'absolute',
+                                    top: '4px',
+                                    right: '8px'
+                                }}    
+                            >{
+                                isShowPassword ? (
+                                    <EyeFilled/>
+                                ) : (
+                                    <EyeInvisibleFilled/>
+                                )
+                            }
+                            </span>
+                            <InputForm placeholder="password" type={isShowPassword ? "text" : "password"}></InputForm>
+                        </div>
+
+                        <div style={{position: 'relative'}}>
+                            <span
+                                style={{
+                                    zIndex: 10,
+                                    position: 'absolute',
+                                    top: '4px',
+                                    right: '8px'
+                                }}    
+                            >{
+                                isShowPassword ? (
+                                    <EyeFilled/>
+                                ) : (
+                                    <EyeInvisibleFilled/>
+                                )
+                            }
+                            </span>
+                            <InputForm placeholder="password" type={isShowPassword ? "text" : "password"}></InputForm>
+                        </div>
+                        
+                        {/* <InputForm placeholder="password" style={{marginBottom: '10px'}} ></InputForm>
+                        <InputForm placeholder="conrfim password" ></InputForm> */}
                         <ButtonComponent
                                 bordered={false}
                                 size={40}
